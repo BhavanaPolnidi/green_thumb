@@ -1,0 +1,7 @@
+Flask
+transformers
+pillow
+gradio
+requests
+tensorflow
+tf-keras

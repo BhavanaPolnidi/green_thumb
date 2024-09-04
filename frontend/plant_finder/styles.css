@@ -1,0 +1,335 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #f7f8f6;
+    padding-bottom: 10px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #e4e9e2;
+    font-size: 14px;
+}
+
+.top-bar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar ul li {
+    margin-right: 20px;
+}
+
+.top-bar ul li a {
+    color: #547753;
+    text-decoration: none;
+}
+
+.main-nav {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #e4e9e2;
+}
+
+.main-nav h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #5b7553;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 2px;
+}
+
+.main-nav p {
+    margin: 5px 0;
+    font-family: "Lucida Handwriting", cursive;
+    font-size: 16px;
+    color: #799b8e;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b5c8bb;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.social-links {
+    margin-left: 15px;
+}
+
+.social-links img {
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+}
+
+.plant-collections {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.plant-collections a {
+    color: #547753;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bottom-nav {
+    background-color: #e4e9e2;
+    padding: 10px 0;
+}
+
+.bottom-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-nav ul li {
+    margin: 0 20px;
+}
+
+.bottom-nav ul li a {
+    color: #547753;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.plant-finder {
+    border: 2px solid #547753;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.alphabet-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+.alphabet-nav span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.alphabet-nav nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.alphabet-nav nav ul li {
+    margin: 0 5px;
+}
+
+.alphabet-nav nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.plant-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Increased the gap between cards */
+    justify-content: center; /* Center align the cards */
+    padding: 20px;
+}
+
+.plant-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.plant-card:hover {
+    transform: translateY(-8px);
+}
+
+.plant-card img {
+    width: 100%;
+    height: auto;
+}
+
+.plant-info {
+    padding: 16px; /* Increased padding inside the card */
+}
+
+.plant-info h3 {
+    font-size: 1.2em; /* Increased font size for headings */
+    margin-bottom: 10px;
+}
+
+.plant-info p {
+    font-size: 0.9em; /* Slightly increased font size */
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.6em; /* Increased line height */
+}
+
+.plant-info a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.plant-info a:hover {
+    text-decoration: underline;
+}
+
+.add-to-collection {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 15px; /* Increased padding */
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1em; /* Slightly increased font size */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-collection:hover {
+    background-color: #45a049;
+}
+.plant-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Spacing between cards */
+    justify-content: center; /* Center align the cards */
+    padding: 20px;
+}
+
+.plant-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: calc(20% - 20px); /* Adjust width for 5 cards per row with gap */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.plant-info {
+    padding: 12px; /* Reduced padding inside the card */
+}
+
+.plant-info h3 {
+    font-size: 1.1em; /* Reduced font size for headings */
+    margin-bottom: 8px; /* Reduced margin below heading */
+}
+
+.plant-info p {
+    font-size: 0.8em; /* Reduced font size */
+    color: #555;
+    margin-bottom: 8px; /* Reduced margin below paragraph */
+    line-height: 1.4em; /* Reduced line height */
+}
+
+.add-to-collection {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 12px; /* Reduced padding */
+    text-align: center;
+    display: inline-block;
+    margin-top: 8px; /* Reduced margin on top */
+    font-size: 0.9em; /* Reduced font size */
+    border-radius: 4px; /* Adjusted border radius */
+    cursor: pointer;
+}
+
+.add-to-collection:hover {
+    background-color: #45a049;
+}
+.highlight {
+    border: 2px solid yellow;
+    background-color: lightyellow;
+}
+.highlight {
+    border: 2px solid yellow;
+    background-color: lightyellow;
+}
+iframe {
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
+    border: none;
+}
+
+.collection {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 2px solid #ccc;
+}
+
+.collection-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.collection-cards .plant-card {
+    flex: 1 1 150px; /* Adjust size of collection cards */
+    max-width: 200px;
+}
+.collection-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+#planting-ideas-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+#planting-ideas-form h2 {
+    margin-top: 0;
+}
+
+#planting-ideas-form label {
+    display: inline-block;
+    width: 150px;
+}
+
+#planting-ideas-form select {
+    width: 200px;
+}

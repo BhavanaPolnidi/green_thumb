@@ -1,0 +1,371 @@
+:root {
+  --main-bg-color: #f9f9f9;
+  --nav-bg-color: #D8EFD3;
+  --text-color: #000;
+  --accent-color: #FAF1E4;
+  --font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--main-bg-color);
+  font-family: var(--font-family);
+  background-size: 100% 100%;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--nav-bg-color);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 0 24px;
+  position: absolute;
+  right: 20px;
+}
+
+nav li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--font-family);
+}
+nav #logo_box {
+  width: 90px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 10px;
+  background: url("https://w7.pngwing.com/pngs/588/355/png-transparent-bastyr-university-naturopathy-medicine-health-care-alternative-health-services-herbs-miscellaneous-food-leaf.png") no-repeat;
+
+}
+
+nav #logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+nav #circle {
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--text-color);
+  position: absolute;
+  margin: 45px 0 5px 50px;
+  border-radius: 50%;
+  animation: pop 3s ease infinite;
+  will-change: transform;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+nav #square {
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--text-color);
+  position: absolute;
+  margin: -25px 0 0 -60px;
+  transform: rotate(45deg);
+  animation: rotate 3s ease infinite;
+  will-change: transform;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(120deg);
+  }
+  50% {
+    transform: rotate(240deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+section
+{
+  width: 100%;
+  height: 600px;
+  margin: 80px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  background: linear-gradient(to bottom,#D6EFD8,#D6EFD8,var(--main-bg-color));
+  /* opacity: 0.3; */
+}
+.animatedDiv {
+  width: 60%;
+  height: 550px;
+  /* border-radius: 10px; */
+  /* margin: 100px auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: transparent;
+  animation: bgdisplay 1s forwards;
+  animation-delay: 7s;
+  /* border: 1px solid black; */
+}
+@keyframes bgdisplay {
+  0%
+  {
+    width: 70%;
+    height: 550px;
+    /* margin: 100px auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: transparent;
+  }
+  100%
+  {
+    width: 70%;
+    margin-top: 20px;
+    flex-direction: row;
+  }
+}
+.firsttitle
+{
+  width: 70%;
+  height: 500px;
+  /* border:1px solid black; */
+  font-size: 28px;
+  font-weight: 600;
+  /* line-height: 1.2; */
+  font-family: var(--font-family);
+  align-items:flex-start;
+  justify-content:center;
+  flex-direction: column;
+  /* padding-left: 20px; */
+  display: flex;opacity: 0;
+  animation: bgshow 1s forwards;
+  animation-delay: 7.5s;
+  position: relative;
+  left: -60px;
+}
+@keyframes bgshow {
+  0%{opacity: 0;}
+  100%{ opacity: 1;}
+}
+.featuresBox
+{
+  width: 30%;
+  height: 500px;
+  /* border: 1px solid black; */
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  animation: bgshow 1s forwards;
+  animation-delay: 7.5s;
+  position: relative;
+  left:-30px;
+}
+
+#fbox
+{
+  width: 250px;
+  height: 450px;
+  /* border: 1px solid black; */
+  position: absolute;
+  border-radius: 10px;
+  opacity: 0;
+  animation:bgshow 1s forwards;
+  animation-delay:7.5s;
+}
+.fbox1
+{
+  background: url("./assets/ecommerce_add_img.avif") no-repeat;
+  background-size: 100% 100%;
+}
+.fbox2
+{
+  background: url("./assets/community_add_img.avif") no-repeat;
+  background-size: 100% 100%;
+}
+.fbox3
+{
+  background: url("./assets/garden_design_add_img.png") no-repeat;
+  background-size: 100% 100%;
+}
+/* @keyframes bgchange {
+  0%
+  {background-color: #000;}
+  50%{background-color: #114232;}
+  100%{background-color: pink;}
+} */
+.animatedDiv p {
+  text-align: center;
+  color: #114232;
+  font-size: 150px;
+  font-family: Copperplate Gothic, serif;
+  animation: text_upwards 1s forwards;
+  animation-delay: 6.5s;
+  will-change: transform, opacity;
+  display: block;
+  margin-bottom: -25px;
+}
+
+@keyframes text_upwards {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    transform: translateY(-300px);
+    opacity: 0;display: none;
+  }
+}
+
+.animatedDiv .img_box, 
+.animatedDiv .img_box1, 
+.animatedDiv .img_box2, 
+.animatedDiv .img_box3 {
+  width: 250px;
+  height: 300px;
+  position: absolute;
+}
+
+.animatedDiv .img_box {
+  animation: upwards 1s forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes upwards {
+  0% {
+    transform: translateY(0) rotate(25deg);
+    opacity: 1;
+  }
+  10% {
+    transform: translateY(0px) rotate(15deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300px) rotate(15deg);
+    opacity: 0;
+    display: none;
+  }
+}
+
+.animatedDiv .img_box1 {
+  animation: upwards1 1s forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes upwards1 {
+  0% {
+    transform: translateY(0) rotate(15deg);
+    opacity: 1;
+  }
+  10% {
+    transform: translateY(0px) rotate(5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300px) rotate(5deg);
+    opacity: 0;
+    display: none;
+  }
+}
+
+.animatedDiv .img_box2 {
+  animation: upwards2 1s forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes upwards2 {
+  0% {
+    transform: translateY(0) rotate(5deg);
+    opacity: 1;
+  }
+  10% {
+    transform: translateY(0px) rotate(-15deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300px) rotate(-15deg);
+    opacity: 0;
+    display: none;
+  }
+}
+
+.animatedDiv .img_box3 {
+  animation: upwards3 1s forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes upwards3 {
+  0% {
+    transform: translateY(0) rotate(-15deg);
+    opacity: 1;
+  }
+  10% {
+    transform: translateY(0px) rotate(-25deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300px) rotate(-25deg);
+    opacity: 0;
+    display: none;
+  }
+}
+/* 
+footer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: auto;
+  left: 0;
+  background-color: var(--nav-bg-color);
+}
+
+footer span {
+  color: white;
+} */
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav li a {
+    font-size: 18px;
+  }
+
+  .animatedDiv p {
+    font-size: 100px;
+  }
+
+  .animatedDiv .img_box, 
+  .animatedDiv .img_box1, 
+  .animatedDiv .img_box2, 
+  .animatedDiv .img_box3 {
+    width: 200px;
+    height: 250px;
+  }
+}

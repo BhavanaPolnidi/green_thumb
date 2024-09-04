@@ -1,0 +1,166 @@
+{
+  "id": 1024188774,
+  "custom_id": null,
+  "meta_data": {
+    "latitude": null,
+    "longitude": null,
+    "date": "2024-08-07",
+    "datetime": "2024-08-07"
+  },
+  "uploaded_datetime": 1723009995.194392,
+  "finished_datetime": 1723009995.416318,
+  "images": [
+    {
+      "file_name": "f1dfa05184ea4973afccab72c3c4999d.jpg",
+      "url": "https://plant.id/media/imgs/f1dfa05184ea4973afccab72c3c4999d.jpg"
+    }
+  ],
+  "suggestions": [
+    {
+      "id": 102418877400,
+      "plant_name": "Camellia",
+      "probability": 0.4097,
+      "confirmed": false,
+      "plant_details": {
+        "language": "en",
+        "scientific_name": "Camellia",
+        "structured_name": {
+          "genus": "camellia"
+        }
+      }
+    },
+    {
+      "id": 102418877401,
+      "plant_name": "Rosa chinensis",
+      "probability": 0.1742,
+      "confirmed": false,
+      "plant_details": {
+        "language": "en",
+        "scientific_name": "Rosa chinensis",
+        "structured_name": {
+          "genus": "rosa",
+          "species": "chinensis"
+        }
+      }
+    },
+    {
+      "id": 102418877402,
+      "plant_name": "Rosa gallica",
+      "probability": 0.1511,
+      "confirmed": false,
+      "plant_details": {
+        "language": "en",
+        "scientific_name": "Rosa gallica",
+        "structured_name": {
+          "genus": "rosa",
+          "species": "gallica"
+        }
+      }
+    },
+    {
+      "id": 102418877403,
+      "plant_name": "Camellia japonica",
+      "probability": 0.1389,
+      "confirmed": false,
+      "plant_details": {
+        "language": "en",
+        "scientific_name": "Camellia japonica",
+        "structured_name": {
+          "genus": "camellia",
+          "species": "japonica"
+        }
+      }
+    },
+    {
+      "id": 102418877404,
+      "plant_name": "Dianthus caryophyllus",
+      "probability": 0.0952,
+      "confirmed": false,
+      "plant_details": {
+        "language": "en",
+        "scientific_name": "Dianthus caryophyllus",
+        "structured_name": {
+          "genus": "dianthus",
+          "species": "caryophyllus"
+        }
+      }
+    },
+    {
+      "id": 102418877405,
+      "plant_name": "Rosa lucieae",
+      "probability": 0.0722,
+      "confirmed": false,
+      "plant_details": {
+        "language": "en",
+        "scientific_name": "Rosa lucieae",
+        "structured_name": {
+          "genus": "rosa",
+          "species": "lucieae"
+        }
+      }
+    },
+    {
+      "id": 102418877406,
+      "plant_name": "Portulaca grandiflora",
+      "probability": 0.0554,
+      "confirmed": false,
+      "plant_details": {
+        "language": "en",
+        "scientific_name": "Portulaca grandiflora",
+        "structured_name": {
+          "genus": "portulaca",
+          "species": "grandiflora"
+        }
+      }
+    },
+    {
+      "id": 102418877407,
+      "plant_name": "Rosa abietina",
+      "probability": 0.0149,
+      "confirmed": false,
+      "plant_details": {
+        "language": "en",
+        "scientific_name": "Rosa abietina",
+        "structured_name": {
+          "genus": "rosa",
+          "species": "abietina"
+        }
+      }
+    },
+    {
+      "id": 102418877408,
+      "plant_name": "Begonia × tuberhybrida",
+      "probability": 0.0148,
+      "confirmed": false,
+      "plant_details": {
+        "language": "en",
+        "scientific_name": "Begonia × tuberhybrida",
+        "structured_name": {
+          "genus": "begonia",
+          "hybrid": "tuberhybrida"
+        }
+      }
+    },
+    {
+      "id": 102418877409,
+      "plant_name": "Rosa × damascena",
+      "probability": 0.0126,
+      "confirmed": false,
+      "plant_details": {
+        "language": "en",
+        "scientific_name": "Rosa × damascena",
+        "structured_name": {
+          "genus": "rosa",
+          "hybrid": "damascena"
+        }
+      }
+    }
+  ],
+  "modifiers": [],
+  "secret": "rcYeV27rmlpm4dH",
+  "fail_cause": null,
+  "countable": true,
+  "feedback": null,
+  "is_plant": true,
+  "is_plant_probability": 0.9152216
+}

@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+}
+
+.sidebar, .main-content {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    flex: 1 1 200px;
+    max-width: 250px;
+}
+
+.main-content {
+    flex: 2 1 600px;
+    max-width: 800px;
+}
+
+.filter-section label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.filter-section select, .filter-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.filter-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.filter-section button:hover {
+    background-color: #218838;
+}
+
+.garden-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.garden-card:hover {
+    transform: translateY(-5px);
+}
+
+.garden-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.garden-card h3 {
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+.garden-card p {
+    margin: 10px;
+    color: #555;
+}
+
+.garden-card button {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.garden-card button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9f5e0; /* Light green background */
+    text-align: center;
+}
+
+h1 {
+    color: #2e8b57; /* Medium sea green */
+    margin: 20px 0;
+}
+
+.card {
+    background-color: #ffffff; /* White background for cards */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: 20px;
+    width: 300px;
+    vertical-align: top;
+}
+
+input[type="file"] {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #28a745; /* Bootstrap green */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green */
+}
+
+#cameraPreviewContainer {
+    margin: 20px;
+    display: none;
+}
+
+#cameraPreview {
+    border: 2px solid #c1e1c1; /* Light green border */
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#capturedImage {
+    border: 2px solid #c1e1c1; /* Light green border */
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+#results {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff; /* White background for results */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+header .logo {
+    width: 100px; /* Adjust size as needed */
+    margin: 20px auto;
+}

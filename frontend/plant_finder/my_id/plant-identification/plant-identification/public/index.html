@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Identification</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="uploads/download.png" alt="Plant Logo" class="logo">
+    </header>
+
+    <h1>Plant Identification</h1>
+
+    <div class="card">
+        <h2>Upload Image</h2>
+        <form id="uploadForm">
+            <input type="file" id="imageInput" accept="image/*">
+            <button type="button" id="uploadImageButton">Upload Image</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Capture Photo</h2>
+        <button type="button" id="openCameraButton">Open Camera</button>
+        <div id="cameraPreviewContainer">
+            <video id="cameraPreview" autoplay></video>
+            <button id="capturePhotoButton">Capture Photo</button>
+        </div>
+        <img id="capturedImage" src="" alt="Captured Image">
+    </div>
+
+    <div id="results"></div>
+
+    <script>
+        const openCameraButton = document.getElementById('openCameraButton');
+        const uploadImageButton = document.getElementById('uploadImageButton');
+        const capturePhotoButton = document.getElementById('capturePhotoButton');
+        const cameraPreview = document.getElementById('cameraPreview');
+        const capturedImage = document.getElementById('capturedImage');
+        const cameraPreviewContainer = document.getElementById('cameraPreviewContainer');
+
+        uploadImageButton.addEventListener('click', function() {
+            const formData = new FormData();
+            const fileInput = document.getElementById('imageInput');
+            if (fileInput.files.length > 0) {
+                formData.append('images', fileInput.files[0]);
+                uploadImage(formData);
+            } else {
+                alert('Please select an image to upload.');
+            }
+        });
+
+        openCameraButton.addEventListener('click', function() {
+            cameraPreviewContainer.style.display = 'block';
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(stream => {
+                    cameraPreview.srcObject = stream;
+                    cameraPreview.style.display = 'block';
+                })
+                .catch(error => {
+                    console.error('Error accessing camera:', error);
+                });
+        });
+
+        capturePhotoButton.addEventListener('click', function() {
+            const canvas = document.createElement('canvas');
+            canvas.width = cameraPreview.videoWidth;
+            canvas.height = cameraPreview.videoHeight;
+            const context = canvas.getContext('2d');
+            context.drawImage(cameraPreview, 0, 0, canvas.width, canvas.height);
+            const dataUrl = canvas.toDataURL('image/jpeg');
+            capturedImage.src = dataUrl;
+            capturedImage.style.display = 'block';
+            const formData = new FormData();
+            formData.append('images', dataUrl);
+            uploadImage(formData);
+            cameraPreview.srcObject.getTracks().forEach(track => track.stop());
+            cameraPreview.style.display = 'none';
+            cameraPreviewContainer.style.display = 'none';
+        });
+
+        function uploadImage(formData) {
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.suggestions && data.suggestions.length > 0) {
+                    let resultsHTML = '<h2>Plant Suggestions:</h2><ul>';
+                    data.suggestions.forEach(suggestion => {
+                        resultsHTML += `<li><strong>${suggestion.plantName}</strong> (${suggestion.scientificName}) - Probability: ${suggestion.probability}</li>`;
+                    });
+                    resultsHTML += '</ul>';
+                    document.getElementById('results').innerHTML = resultsHTML;
+                } else {
+                    document.getElementById('results').innerText = 'No suggestions found.';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('results').innerText = 'An error occurred while identifying the plant.';
+            });
+        }
+    </script>
+</body>
+</html>
